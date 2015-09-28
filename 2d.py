@@ -32,7 +32,7 @@ dx = np.ones(a)
 dy = np.ones(a)
 
 for y in range(0,a):
-    dy[y] = 10 # length
+    dy[y] = 8 # length
     if a != 0:
         ax.add_patch(
             patches.Rectangle(
@@ -66,7 +66,7 @@ dx = np.ones(a)
 dy = np.ones(a)
 
 for y in range(0,a):
-    dx[y] = 10 # length
+    dx[y] = 8 # length
     if a != 0:
         ax.add_patch(
             patches.Rectangle(

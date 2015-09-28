@@ -27,7 +27,7 @@
 
 
 #include "MC.h"
-MC::MC(long int ST, int LEN,int C, int R, double Z,double E) //E stands for betaepsilon!
+MC::MC(long int ST, int LEN,int C, int R, double Z,double E) //E stands for betaepsilon! AND VINK SAID HIS epsilon = 1, so basically E->beta
 {
 	VRodlist.clear(); // the list storage the Vertical Rods;
     HRodlist.clear(); // the list storage the Horizantal Rods;
