@@ -39,7 +39,8 @@ for y in range(0,a):
                 (xpos[y], ypos[y]),
                 dx[y],
                 dy[y],
-                facecolor="red"
+                facecolor="red",
+                linewidth=0.3
             )
         )
 
@@ -73,11 +74,13 @@ for y in range(0,a):
                 (xpos[y], ypos[y]),
                 dx[y],
                 dy[y],
+                facecolor="blue",
+                linewidth=0.3
             )
 
         )
         
 plt.axis('equal')
 plt.grid()
-fig.savefig('2dplot.png', dpi=90, bbox_inches='tight')
+fig.savefig('2dplot.png', dpi=300, bbox_inches='tight')
 # plt.show()
