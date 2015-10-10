@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+	stringstream t;
 	double start = clock();
 
 	// ======================= Plotting the final config ========================
