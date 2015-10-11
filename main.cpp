@@ -13,6 +13,7 @@ using namespace std;
 *  1.we can plot the final config by running 2d.py:  python 2d.py
 *  2.we obtain the N distribution historgams by running his.py:  python his.py
 *  3.we obtain the N vs Run plots by running NvsR.py: python NvsR.py
+*  4.we obtain the data for the mean values by running mean.py: python mean.py
 *******************************************************************************
 */
 
@@ -23,7 +24,7 @@ int main()
 
 	// ======================= Plotting the final config ========================
 	vector<HR> VR,HR;
-	MC m(1E8L,8,128,128,exp(1*(-6.51505)),1);
+	MC m(1E8L,8,128,128,exp(1*(-2)),1);
 	m.MCRUN();
 	VR = m.getVRodlist();
 	HR = m.getHRodlist();

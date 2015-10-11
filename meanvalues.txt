@@ -1,0 +1,4 @@
+The average density Rho is 0.7968883842 
+The average Vertical Rod is  836.20050
+The average Horizontal Rod is 795.82700
+The average Q is  0.0246500636
