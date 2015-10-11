@@ -36,9 +36,6 @@ class MC
         vector<HR> getVRodlist();
         vector<HR> getHRodlist();
     	double getTho() const;
-    	double getQ() const;
-    	double getAaccp() const;
-    	double getDaccp() const;
         double getNh() const;
         double getNv() const;
         // ******** Setters ******//

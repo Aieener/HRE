@@ -81,7 +81,6 @@ def his():
 	fig6.savefig(title, dpi=180, bbox_inches='tight')
 
 
-
 his()
 
 

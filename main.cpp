@@ -1,9 +1,20 @@
 // My main file for HR_MO+
 // Data: July27 2015
 // Authur: Yuding Ai
+
+
 #include "MC.h"
 #include <iostream>
 using namespace std;
+
+
+/**************************** Data Analysis ***********************************
+*  After finish the MC simulation, we can use python to do the data analysis:
+*  1.we can plot the final config by running 2d.py:  python 2d.py
+*  2.we obtain the N distribution historgams by running his.py:  python his.py
+*  3.we obtain the N vs Run plots by running NvsR.py: python NvsR.py
+*******************************************************************************
+*/
 
 int main()
 {
@@ -12,7 +23,7 @@ int main()
 
 	// ======================= Plotting the final config ========================
 	vector<HR> VR,HR;
-	MC m(1E11L,8,128,128,exp(0.5*(-7.78765)),0.5);
+	MC m(1E8L,8,128,128,exp(1*(-6.51505)),1);
 	m.MCRUN();
 	VR = m.getVRodlist();
 	HR = m.getHRodlist();

@@ -5,21 +5,15 @@
 * Date: 2015.09.23
 * *************************** MC implementation ********************************
 * This simulation follows grand canonical ensemble.
-* In such simulation, Only Energy and N of particles fluctuate, we accomplish EF by
-* using both add/del and displacement moves, while NF by particle addition and 
-* deletion moves;
+* In such simulation, Only Energy and N of particles fluctuate, we accomplish EF 
+* and NF by using add/del  moves.
 * ******************************************************************************
-* The Acceptance relation for Displacement is given by: (Page 130 -- Understanding 
-* Molecular Simulations)
-*
-*  -- Pds = min [1, exp{-beta*(E' - E)}]
-*  where E stands for the Energy before displacement and E' stands for after;
 *
 * The Acceptance relation for Addition is given by: (Page 12 --M.S.Shell 2012)
-*  -- Pad = min [1,((r*c/2)/(N + 1)) * exp{-beta*miu}]
+*  -- Pad = min [1,((r*c)/(length*(N + 1))) * exp{-beta*miu}]
 *
 * The Acceptance relation for Deletion is given by:
-*  -- Pde = min [1,(N/(r*c/2))*exp{beta*miu}]
+*  -- Pde = min [1,(N*length/(r*c))*exp{beta*miu}]
 *
 * where miu is the chemical potential
 *
@@ -55,27 +49,6 @@ double MC::getTho() const
 	double tho;	
 	tho = double(length*(av+ah-dv-dh))/double(r*c);
 	return tho;
-}
-
-double MC::getQ() const
-{
-	double Q;	
-	Q = (nv - nh)/(nv + nh);
-	return Q;
-}
-
-double MC::getAaccp() const
-{
-	double A;
-	A = z*(double(r*c))/(double(av+ah-dv-dh+1.0)*double(length));
-	return A;
-}
-
-double MC::getDaccp() const
-{
-	double D;
-	D = (double(av+ah-dv-dh)*double(length))/(z*(double(r*c)));
-	return D;
 }
 
 double MC::getNh() const
